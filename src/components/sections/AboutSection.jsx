@@ -12,16 +12,15 @@ function AboutSection() {
         </h2>
         <div className="about-copy">
           <p className="about-lede">
-            {profile.background}, bringing curiosity and a problem-solving mindset to every project.
+            {profile.background}, combining a problem-solving mindset with hands-on full-stack projects.
           </p>
           <p>
-            My foundation spans modern web development, algorithms, and backend systems.
-            I work with {profile.skills.join(', ')}.
+            I build web applications with {profile.skills.join(', ')}, with a particular
+            interest in backend systems, databases, and how products work end to end.
           </p>
           <p>
-            I enjoy building full-stack applications and working with databases. I care
-            about clean, maintainable code and solving complex logical problems, while
-            continuing to strengthen the fundamentals through hands-on projects.
+            I value clear, maintainable code and keep strengthening my fundamentals by
+            turning ideas into working applications.
           </p>
           <span className="about-signoff">{profile.aspiration}</span>
         </div>

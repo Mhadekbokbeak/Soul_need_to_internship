@@ -1,8 +1,8 @@
 import ArrowIcon from '../ui/ArrowIcon'
 
 const projectLinks = [
-  { key: 'demoUrl', label: 'Live demo', unavailable: 'Demo link not added yet' },
-  { key: 'githubUrl', label: 'GitHub', unavailable: 'GitHub link not added yet' },
+  { key: 'demoUrl', label: 'Live demo', unavailable: 'Demo link not added yet', style: 'demo' },
+  { key: 'githubUrl', label: 'GitHub source', unavailable: 'GitHub link not added yet', style: 'github' },
 ]
 
 function getSafeExternalUrl(value) {
@@ -16,25 +16,26 @@ function getSafeExternalUrl(value) {
   }
 }
 
-function ProjectLinks({ project }) {
+function ProjectLinks({ project, className = '' }) {
   return (
-    <div className="project-actions" aria-label="Project links">
-      {projectLinks.map(({ key, label, unavailable }) => {
+    <div className={`project-actions ${className}`.trim()} aria-label={`Project links for ${project.title}`}>
+      {projectLinks.map(({ key, label, unavailable, style }) => {
         const href = getSafeExternalUrl(project[key])
 
         return href ? (
           <a
-            className="project-action"
+            className={`project-action project-action--${style}`}
             href={href}
             key={key}
             target="_blank"
             rel="noreferrer"
+            aria-label={`${label} for ${project.title} (opens in a new tab)`}
           >
             {label} <ArrowIcon diagonal />
           </a>
         ) : (
           <button
-            className="project-action project-action--unavailable"
+            className={`project-action project-action--${style} project-action--unavailable`}
             type="button"
             disabled
             key={key}

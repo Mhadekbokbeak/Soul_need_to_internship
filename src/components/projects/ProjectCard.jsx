@@ -1,5 +1,6 @@
 import ArrowIcon from '../ui/ArrowIcon'
 import PreviewArtwork from './PreviewArtwork'
+import ProjectLinks from './ProjectLinks'
 
 function ProjectCard({ project, index, isActive, isPast, isRevealed, onOpen }) {
   return (
@@ -36,6 +37,7 @@ function ProjectCard({ project, index, isActive, isPast, isRevealed, onOpen }) {
           <span className="preview-caption">A closer look <ArrowIcon diagonal /></span>
         </div>
       </button>
+      <ProjectLinks project={project} className="project-actions--card" />
     </article>
   )
 }
