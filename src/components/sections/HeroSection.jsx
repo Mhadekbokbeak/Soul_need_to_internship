@@ -18,7 +18,16 @@ function HeroSection() {
             I’m <strong>{profile.name}</strong>, {profile.introduction}
           </p>
           <div className="hero-actions" aria-label="Quick links">
-            <a className="hero-cta hero-cta--primary" href="#projects">
+            <a
+              className="hero-cta hero-cta--primary"
+              href="/cv.pdf"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="View CV as a PDF in a new tab"
+            >
+              View CV (PDF) <ArrowIcon diagonal />
+            </a>
+            <a className="hero-cta" href="#projects">
               Explore projects <span aria-hidden="true">↓</span>
             </a>
             <a

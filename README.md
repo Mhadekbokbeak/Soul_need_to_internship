@@ -14,6 +14,7 @@ Run the production build and lint checks with `npm run build` and `npm run lint`
 ## Updating the content
 
 - Edit `src/data/profile.js` to change the name, role, introduction, skills, GitHub profile, and portfolio year.
+- Replace `public/cv.pdf` to update the CV linked from the home-page introduction.
 - Edit `src/data/projects.js` to add or update project descriptions, responsibilities, technologies, and details.
 - When a project is ready to show, put its screenshot in `public/projects/` and set its `image` path in `src/data/projects.js` (for example, `image: '/projects/my-project.webp'`). The same screenshot will appear in the project preview and detail page. Optionally set `imageAlt` to describe the screenshot for screen readers. Leave `image` empty to keep the built-in neutral artwork.
 - Set each project's `demoUrl` and `githubUrl` in `src/data/projects.js` to enable its external links on the project card and detail page. Leave either value empty while that destination is unavailable.
